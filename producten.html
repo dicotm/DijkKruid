@@ -11,21 +11,45 @@
 <style>
 :root{--linen:#FAF7EE;--dike:#2F4A3C;--leaf:#6B8552;--clay:#A6714B;--straw:#EFE6CB;--sun:#EFC53E;--sun-soft:#FBEBB0;--ink:#232920;--ink-soft:#4B5548;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--linen);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65}.wrap{max-width:1200px;margin:auto;padding:0 32px}a{color:inherit}
-header{position:sticky;top:0;z-index:20;background:rgba(250,247,238,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(47,74,60,.12)}nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--dike);font-family:'Fraunces',serif;font-weight:600;font-size:1.45rem}.logo img{width:48px;height:48px;object-fit:contain}.navlinks{display:flex;align-items:center;gap:26px;color:var(--dike);font-weight:600}.navlinks a{text-decoration:none}.contact{background:var(--dike);color:#fff!important;padding:13px 22px;border-radius:999px}
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(47,74,60,.12)}
+nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--dike);letter-spacing:-.01em;display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:34px;height:34px;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links ul{list-style:none;display:flex;gap:32px;font-size:.95rem;font-weight:500}
+.nav-links ul a{text-decoration:none;color:var(--ink-soft)}
+.nav-links ul a:hover{color:var(--dike)}
+.nav-cta{background:var(--dike);color:var(--linen);padding:10px 20px;border-radius:100px;font-size:.9rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;align-items:center;justify-content:center;color:var(--dike)}
+.menu-btn svg{width:24px;height:24px}
+.mobile-menu{max-height:0;overflow:hidden;background:var(--linen);border-bottom:1px solid rgba(47,74,60,.12);transition:max-height .25s ease}
+.mobile-menu.open{max-height:320px}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;padding:8px 20px 24px;gap:4px}
+.mobile-menu a{display:block;padding:12px 4px;text-decoration:none;color:var(--ink-soft);font-weight:500;border-bottom:1px solid rgba(47,74,60,.08)}
 .hero{padding:70px 0 38px}.hero-inner{max-width:850px}.eyebrow{display:inline-block;background:var(--sun-soft);color:var(--dike);padding:7px 14px;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.02em;margin-bottom:18px}.crumbs{font-size:.88rem;color:var(--ink-soft);margin-bottom:28px}.crumbs a{text-decoration:none}.hero h1{font-family:'Fraunces',serif;color:var(--dike);font-size:clamp(2.8rem,6vw,5rem);line-height:1.03;max-width:12ch}.hero h1 em{color:var(--clay)}.hero p{margin-top:20px;max-width:65ch;color:var(--ink-soft);font-size:1.08rem}
 .catalog{padding:10px 0 70px}.section-head{max-width:680px;margin-bottom:30px}.section-head h2{font-family:'Fraunces',serif;color:var(--dike);font-size:clamp(2rem,4vw,3rem);line-height:1.08}.section-head p{margin-top:12px;color:var(--ink-soft)}.product-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.product-nav a{background:var(--white);border:1px solid rgba(47,74,60,.13);border-radius:14px;padding:15px 16px;text-decoration:none;color:var(--dike);font-weight:600;transition:.2s}.product-nav a:hover{background:var(--straw);transform:translateY(-2px)}.product-nav small{display:block;color:var(--clay);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
 .product{padding:45px 0 75px}.product:nth-of-type(even){background:rgba(239,230,203,.24)}.product-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:58px;align-items:start}.product-visual{position:sticky;top:105px;border-radius:20px;overflow:hidden;background:var(--white);border:1px solid rgba(47,74,60,.12);box-shadow:0 12px 35px rgba(47,74,60,.08)}.product-visual img{display:block;width:100%;height:auto}.product-copy h2{font-family:'Fraunces',serif;color:var(--dike);font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.05;max-width:14ch}.underline{width:80px;height:4px;background:var(--sun);margin:22px 0}.lead{font-size:1.12rem;color:var(--dike);margin-bottom:13px;font-weight:500}.intro{font-size:1rem;color:var(--ink-soft);max-width:64ch}.badges{display:flex;gap:14px;margin-top:25px;flex-wrap:wrap}.badge{display:flex;align-items:center;gap:9px;color:var(--dike);font-weight:600;font-size:.9rem}.badge-icon{width:42px;height:42px;border:1.5px solid var(--dike);border-radius:50%;display:grid;place-items:center}
 .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.info-card{background:rgba(255,255,255,.76);border:1px solid rgba(47,74,60,.13);border-radius:16px;padding:24px}.info-card h3{font-family:'Fraunces',serif;color:var(--dike);font-size:1.35rem;margin-bottom:12px}.info-card h3:after{content:"";display:block;width:34px;height:3px;background:var(--sun);margin-top:9px}.info-card p{color:var(--ink-soft);margin-bottom:9px}.info-card p:last-child{margin-bottom:0}.info-card strong{color:var(--dike)}.muted{font-size:.86rem;color:var(--ink-soft);opacity:.9}
 .notice{margin:10px 0 65px;background:#EFF2E8;border-radius:18px;padding:25px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}.notice p{color:var(--dike);max-width:780px}.button{display:inline-block;background:var(--dike);color:#fff;text-decoration:none;font-weight:600;padding:14px 24px;border-radius:999px;white-space:nowrap}
 @media(max-width:1000px){.product-nav{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:1fr;gap:30px}.product-visual{position:relative;top:auto;max-width:700px}.info-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.navlinks{display:none}.wrap{padding:0 20px}nav{min-height:70px}.logo img{width:42px;height:42px}.hero{padding:45px 0 25px}.hero h1{font-size:2.75rem}.product-nav{grid-template-columns:1fr}.product{padding:34px 0 55px}.info-grid{grid-template-columns:1fr}.notice{align-items:flex-start;flex-direction:column;padding:21px}.button{width:100%;text-align:center}.product-copy h2{font-size:2.45rem}}
+@media(max-width:900px){.nav-links{display:none}.menu-btn{display:flex}}
+@media(max-width:700px){.wrap{padding:0 20px}nav.wrap{height:70px}.hero{padding:45px 0 25px}.hero h1{font-size:2.75rem}.product-nav{grid-template-columns:1fr}.product{padding:34px 0 55px}.info-grid{grid-template-columns:1fr}.notice{align-items:flex-start;flex-direction:column;padding:21px}.button{width:100%;text-align:center}.product-copy h2{font-size:2.45rem}}
 </style>
 </head>
 <body>
 <header><nav class="wrap">
 <a href="index.html" class="logo"><img src="images/dijkkruid-logo.png" alt="DijkKruid logo">DijkKruid</a>
-<div class="navlinks"><a href="index.html#verhaal">Ons verhaal</a><a href="index.html#producten">Producten</a><a href="producten.html">Productinformatie</a><a href="index.html#werkwijze">Werkwijze</a><a class="contact" href="index.html#contact">Neem contact op</a></div>
-</nav></header>
+<div class="nav-links"><ul>
+<li><a href="index.html#verhaal">Ons verhaal</a></li>
+<li><a href="index.html#producten">Producten</a></li>
+<li><a href="index.html#werkwijze">Werkwijze</a></li>
+<li><a href="index.html#galerij">Galerij</a></li>
+<li><a href="index.html#contact">Bestellen &amp; contact</a></li>
+</ul><a class="nav-cta" href="index.html#contact">Neem contact op</a></div>
+<button class="menu-btn" aria-label="Menu" aria-expanded="false" onclick="document.querySelector('.mobile-menu').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.mobile-menu').classList.contains('open'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</nav><div class="mobile-menu"><ul>
+<li><a href="index.html#verhaal">Ons verhaal</a></li><li><a href="index.html#producten">Producten</a></li><li><a href="index.html#werkwijze">Werkwijze</a></li><li><a href="index.html#galerij">Galerij</a></li><li><a href="index.html#contact">Bestellen &amp; contact</a></li>
+</ul></div></header>
 
 <main>
 <section class="hero"><div class="wrap hero-inner">
