@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dijkkruid — Nederlandse, ambachtelijke zepen en kruidentincturen, gemaakt met planten uit eigen tuin. Biologisch, natuurlijk en met aandacht.">
+  <title>Dijkkruid — Zeep & tincturen uit eigen tuin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="Dijkkruid home">
+    <img class="brand-logo" src="assets/dijkkruid-logo.png" alt="Dijkkruid">
+  </a>
+  <button class="menu-toggle" aria-label="Menu openen">☰</button>
+  <nav class="nav">
+    <a href="#producten">Producten</a>
+    <a href="#tuin">Onze tuin</a>
+    <a href="#verhaal">Dijkkruid</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Zuidendijk · Dordrecht · Nederland</p>
+    <h1>Van onze tuin,<br><em>voor jou.</em></h1>
+    <p class="hero-text">
+      Dijkkruid maakt ambachtelijke Nederlandse zepen en kruidentincturen
+      met planten en kruiden uit onze eigen tuin. Biologisch, natuurlijk
+      en met aandacht gemaakt.
+    </p>
+    <a class="button" href="#producten">Ontdek Dijkkruid <span>↓</span></a>
+  </div>
+  <div class="hero-image">
+    <img src="assets/olijf-lavendel.jpeg" alt="Ambachtelijke Dijkkruid olijfzeep">
+    <div class="hero-note">kleinschalig<br><strong>&amp; natuurlijk</strong></div>
+  </div>
+</section>
+
+<section class="intro" id="producten">
+  <p class="eyebrow">Wat wij maken</p>
+  <h2>Pure producten,<br>recht uit de natuur.</h2>
+  <p>Van verzorgende zeep tot zorgvuldig gemaakte tincturen. We houden het kleinschalig en kiezen waar mogelijk voor biologische ingrediënten en kruiden van eigen bodem.</p>
+</section>
+
+<section class="products">
+  <article class="product-card">
+    <div class="product-image"><img src="assets/olijf-lavendel.jpeg" alt="Olijf lavendel zeep"></div>
+    <div class="product-info"><span class="tag">Zeep · Lavendel</span><h3>Vette olijf lavendel</h3><p>Ambachtelijke olijfzeep met lavendel.</p><a href="#contact">Meer informatie →</a></div>
+  </article>
+  <article class="product-card">
+    <div class="product-image"><img src="assets/olijf-rozen.jpeg" alt="Zachte olijf rozen zeep"></div>
+    <div class="product-info"><span class="tag">Zeep · Roos</span><h3>Zachte olijf rozen</h3><p>Zachte olijfzeep met een natuurlijk rozenkarakter.</p><a href="#contact">Meer informatie →</a></div>
+  </article>
+  <article class="product-card">
+    <div class="product-image"><img src="assets/olijf-citronella.jpeg" alt="Olijf citronella zeep"></div>
+    <div class="product-info"><span class="tag">Zeep · Citronella</span><h3>Olijf citronella</h3><p>Olijfzeep met citronella.</p><a href="#contact">Meer informatie →</a></div>
+  </article>
+  <article class="product-card tincture-card">
+    <div class="product-image"><img src="assets/olijfzeep-detail.jpeg" alt="Ambachtelijk verpakt Dijkkruid product"></div>
+    <div class="product-info"><span class="tag">Kruiden · Tincturen</span><h3>Tincturen uit eigen tuin</h3><p>Met zorg gemaakte kruidenextracten van planten uit onze eigen tuin.</p><a href="#contact">Ontdek de tincturen →</a></div>
+  </article>
+</section>
+
+<section class="garden" id="tuin">
+  <div class="garden-image"><img src="assets/olijfzeep.jpeg" alt="Dijkkruid producten met natuurlijke materialen"></div>
+  <div class="garden-copy">
+    <p class="eyebrow">Onze eigen tuin</p>
+    <h2>We beginnen bij de plant.</h2>
+    <p>Onze kruiden groeien zo veel mogelijk gewoon in onze eigen tuin aan de Zuidendijk in Dordrecht. We verzorgen, oogsten en verwerken ze op kleine schaal. Zo weten we waar onze ingrediënten vandaan komen en houden we het proces persoonlijk.</p>
+    <div class="values">
+      <div><strong>01</strong><span>Eigen tuin</span></div>
+      <div><strong>02</strong><span>Biologisch &amp; natuurlijk</span></div>
+      <div><strong>03</strong><span>Handgemaakt in Nederland</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="verhaal">
+  <div class="story-copy">
+    <p class="eyebrow">Het verhaal van Dijkkruid</p>
+    <h2>Een beetje terug<br>naar de basis.</h2>
+    <p>Dijkkruid staat voor aandacht voor wat groeit, voor ambacht en voor eenvoudige producten die je begrijpt. Geen massaproductie, maar kleine hoeveelheden en zoveel mogelijk ingrediënten uit eigen tuin of van biologische herkomst.</p>
+    <p>Van onze handen en onze tuin aan de Zuidendijk in Dordrecht naar jouw badkamer of voorraadkast.</p>
+  </div>
+  <div class="story-image"><img src="assets/olijf-rozen.jpeg" alt="Dijkkruid ambachtelijke zeep"></div>
+</section>
+
+<section class="contact" id="contact">
+  <div>
+    <p class="eyebrow">Contact</p>
+    <h2>Benieuwd naar Dijkkruid?</h2>
+    <p>Wil je weten welke zepen en tincturen momenteel beschikbaar zijn? Neem gerust contact met ons op.</p>
+  </div>
+  <form onsubmit="handleSubmit(event)">
+    <label>Naam<input required name="naam" placeholder="Je naam"></label>
+    <label>E-mail<input required type="email" name="email" placeholder="jij@voorbeeld.nl"></label>
+    <label>Bericht<textarea required name="bericht" rows="4" placeholder="Waar ben je benieuwd naar?"></textarea></label>
+    <button class="button" type="submit">Verstuur bericht</button>
+    <p class="form-note" id="form-note"></p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <a class="brand" href="#top"><img class="brand-logo" src="assets/dijkkruid-logo.png" alt="Dijkkruid"></a>
+  <p>© <span id="year"></span> Dijkkruid · Zuidendijk, Dordrecht · Nederland</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
