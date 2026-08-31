@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Productinformatie van DijkKruid: handgemaakte olijfzepen, Overnight Handcrème en kruidentincturen uit Dordrecht.">
+<meta name="description" content="Productinformatie van DijkKruid: handgemaakte olijfzepen, Overnight Handcrème en kruidentincturen uit Dordrecht, waaronder citroenmelisse en roos.">
 <title>DijkKruid — Productinformatie</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--linen:#FAF7EE;--dike:#2F4A3C;--leaf:#6B8552;--clay:#A6714B;--straw:#EFE6CB;--sun:#EFC53E;--sun-soft:#FBEBB0;--ink:#232920;--ink-soft:#4B5548;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--linen);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65}.wrap{max-width:1200px;margin:auto;padding:0 32px}a{color:inherit}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--linen);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65}.wrap{max-width:1120px;margin:0 auto;padding:0 32px}@media(max-width:640px){.wrap{padding:0 20px}}a{color:inherit}
 header{position:sticky;top:0;z-index:50;background:rgba(250,247,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(47,74,60,.12)}
 nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
 .logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--dike);letter-spacing:-.01em;display:flex;align-items:center;gap:10px;text-decoration:none}
@@ -37,19 +37,14 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76
 </style>
 </head>
 <body>
-<header><nav class="wrap">
+<header>
+<nav class="wrap">
 <a href="index.html" class="logo"><img src="images/dijkkruid-logo.png" alt="DijkKruid logo">DijkKruid</a>
-<div class="nav-links"><ul>
-<li><a href="index.html#verhaal">Ons verhaal</a></li>
-<li><a href="index.html#producten">Producten</a></li>
-<li><a href="index.html#werkwijze">Werkwijze</a></li>
-<li><a href="index.html#galerij">Galerij</a></li>
-<li><a href="index.html#contact">Bestellen &amp; contact</a></li>
-</ul><a class="nav-cta" href="index.html#contact">Neem contact op</a></div>
-<button class="menu-btn" aria-label="Menu" aria-expanded="false" onclick="document.querySelector('.mobile-menu').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.mobile-menu').classList.contains('open'))"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-</nav><div class="mobile-menu"><ul>
-<li><a href="index.html#verhaal">Ons verhaal</a></li><li><a href="index.html#producten">Producten</a></li><li><a href="index.html#werkwijze">Werkwijze</a></li><li><a href="index.html#galerij">Galerij</a></li><li><a href="index.html#contact">Bestellen &amp; contact</a></li>
-</ul></div></header>
+<div class="nav-links"><ul><li><a href="index.html#verhaal">Ons verhaal</a></li><li><a href="index.html#producten">Producten</a></li><li><a href="producten.html">Productinformatie</a></li><li><a href="index.html#werkwijze">Werkwijze</a></li></ul><a class="nav-cta" href="index.html#bestellen">Neem contact op</a></div>
+<button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu openen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu"><ul><li><a href="index.html#verhaal">Ons verhaal</a></li><li><a href="index.html#producten">Producten</a></li><li><a href="index.html#werkwijze">Werkwijze</a></li><li><a class="nav-cta" href="index.html#bestellen">Neem contact op</a></li></ul></div>
+</header>
 
 <main>
 <section class="hero"><div class="wrap hero-inner">
@@ -61,14 +56,15 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76
 
 <section class="catalog"><div class="wrap">
 <div class="section-head"><h2>Onze producten</h2><p>Kies een product om direct naar de bijbehorende informatie te gaan.</p></div>
-<div class="product-nav">
+<div class="product-nav" id="citroenmelisse-tinctuur" id="roos-tinctuur">
 <a href="#lavendel-overnight"><small>Handverzorging</small>Overnight Handcrème — Lavendel</a>
 <a href="#sweet-orange"><small>Handverzorging</small>Overnight Handcrème — Sweet Orange</a>
 <a href="#olijf-lavendel"><small>Olijfzeep</small>Vette olijf &amp; lavendel</a>
 <a href="#olijf-roos"><small>Olijfzeep</small>Zachte olijf &amp; roos</a>
 <a href="#olijf-citronella"><small>Olijfzeep</small>Olijf &amp; citronella</a>
 <a href="#pure-olijf"><small>Olijfzeep</small>Pure olijfzeep</a>
-<a href="#tincturen"><small>Kruiden</small>Kruidentincturen</a>
+<a href="#tinctuur-citroenmelisse"><small>Tinctuur</small>Citroenmelisse tinctuur</a>
+<a href="#tinctuur-roos"><small>Tinctuur</small>Roos tinctuur</a>
 </div></div></section>
 
 <!-- Vaste productopbouw: intro → badges → ingrediënten → achtergrond → gebruik/beschikbaarheid -->
@@ -90,9 +86,16 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76
 
 <section class="product" id="pure-olijf"><div class="wrap"><div class="product-grid"><div class="product-visual"><img src="images/olijfzeep.jpeg" alt="Pure DijkKruid olijfzeep"></div><div class="product-copy"><span class="eyebrow">Olijfzeep</span><h2>Pure olijfzeep</h2><div class="underline"></div><p class="lead">Een pure, eenvoudige basis uit de collectie.</p><p class="intro">Een handgemaakt olijfzeep-product van DijkKruid. Voor dit product tonen we alleen informatie die als productgegeven beschikbaar is.</p><div class="badges"><div class="badge"><span class="badge-icon">♧</span>Handgemaakt</div><div class="badge"><span class="badge-icon">◌</span>Olijfolie</div><div class="badge"><span class="badge-icon">✿</span>Eenvoudig</div></div></div></div><div class="info-grid"><article class="info-card"><h3>Ingrediënten</h3><p>Biologische olijfolie.</p><p class="muted">Een volledige ingrediëntenlijst kan worden toegevoegd wanneer deze beschikbaar is.</p></article><article class="info-card"><h3>Over het product</h3><p>Een eenvoudige olijfzeep uit de DijkKruid-collectie.</p></article><article class="info-card"><h3>Gebruik</h3><p>Gebruik als hand- en lichaamszeep. Bewaar de zeep na gebruik zo droog mogelijk.</p></article></div></div></section>
 
-<section class="product" id="tincturen"><div class="wrap"><div class="product-grid"><div class="product-visual"><img src="images/dijkkruid-product.jpeg" alt="DijkKruid kruidentincturen"></div><div class="product-copy"><span class="eyebrow">Kruiden</span><h2>Kruidentincturen</h2><div class="underline"></div><p class="lead">Handgemaakte kruidenextracten uit eigen tuin.</p><p class="intro">DijkKruid maakt kruidentincturen op kleine schaal. Beschikbaarheid wisselt met het seizoen en met wat er in eigen tuin groeit.</p><div class="badges"><div class="badge"><span class="badge-icon">♧</span>Handgemaakt</div><div class="badge"><span class="badge-icon">✿</span>Uit eigen tuin</div><div class="badge"><span class="badge-icon">◌</span>Kleine oplage</div></div></div></div><div class="info-grid"><article class="info-card"><h3>Ingrediënten</h3><p>De ingrediënten verschillen per tinctuur en seizoen.</p><p class="muted">Per afzonderlijke tinctuur kunnen we hier de exacte samenstelling toevoegen.</p></article><article class="info-card"><h3>Over het product</h3><p>Handgemaakte kruidenextracten met kruiden en planten die beschikbaar zijn uit eigen tuin.</p></article><article class="info-card"><h3>Beschikbaarheid</h3><p>Het assortiment wisselt met het seizoen. Neem contact op voor de actuele beschikbare tincturen.</p></article></div></div></section>
+<section class="product" id="tinctuur-citroenmelisse"><div class="wrap"><div class="product-grid"><div class="product-visual"><img src="images/tinctuur-citroenmelisse.jpg" alt="Citroenmelisse tinctuur in glazen pot"></div><div class="product-copy"><span class="eyebrow">Tinctuur</span><h2>Citroenmelisse tinctuur</h2><div class="underline"></div><p class="lead">Tinctuur van citroenmelisse, gemaakt met wat de natuur geeft.</p><p class="intro">Een DijkKruid-tinctuur waarin citroenmelisse centraal staat. Op het oorspronkelijke batchlabel staat “Citroen melisse 40%” en de datum 21-6-21.</p><div class="badges"><div class="badge"><span class="badge-icon">♧</span>Handgemaakt</div><div class="badge"><span class="badge-icon">✿</span>Citroenmelisse</div><div class="badge"><span class="badge-icon">◌</span>Kleine oplage</div></div></div></div><div class="info-grid"><article class="info-card"><h3>Ingrediënt</h3><p>Citroenmelisse.</p><p><strong>Op het label:</strong> 40%.</p></article><article class="info-card"><h3>Over het product</h3><p>Een tinctuur in de maak, passend bij DijkKruid: werken met wat de natuur geeft.</p><p class="muted">Batchlabel: 21-6-21.</p></article><article class="info-card"><h3>Productinformatie</h3><p>De exacte gebruiksinstructie en verdere productspecificaties kunnen hier worden toegevoegd zodra je die aanlevert.</p></article></div></div></section>
+
+<section class="product" id="tinctuur-roos"><div class="wrap"><div class="product-grid"><div class="product-visual"><img src="images/tinctuur-roos.jpg" alt="Roos tinctuur in glazen pot"></div><div class="product-copy"><span class="eyebrow">Tinctuur</span><h2>Roos tinctuur</h2><div class="underline"></div><p class="lead">Tinctuur van roos, gemaakt met wat de natuur geeft.</p><p class="intro">Een DijkKruid-tinctuur waarin roos centraal staat. Op het oorspronkelijke batchlabel staat “Roos 40%” en de datum 27-6-21.</p><div class="badges"><div class="badge"><span class="badge-icon">♧</span>Handgemaakt</div><div class="badge"><span class="badge-icon">♡</span>Roos</div><div class="badge"><span class="badge-icon">◌</span>Kleine oplage</div></div></div></div><div class="info-grid"><article class="info-card"><h3>Ingrediënt</h3><p>Roos.</p><p><strong>Op het label:</strong> 40%.</p></article><article class="info-card"><h3>Over het product</h3><p>Een tinctuur in de maak, passend bij DijkKruid: werken met wat de natuur geeft.</p><p class="muted">Batchlabel: 27-6-21.</p></article><article class="info-card"><h3>Productinformatie</h3><p>De exacte gebruiksinstructie en verdere productspecificaties kunnen hier worden toegevoegd zodra je die aanlevert.</p></article></div></div></section>
 
 <div class="wrap"><div class="notice"><p>De zelfzorgproducten van DijkKruid zijn met zorg gemaakt. We gebruiken zuivere en biologische ingrediënten, zoveel mogelijk uit eigen tuin. Omdat het om handgemaakte producten gaat, kunnen ingrediënten en beschikbaarheid soms wisselen. De productinformatie wordt per product verder aangevuld.</p><a class="button" href="index.html#producten">Terug naar alle producten</a></div></div>
 </main>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);menuBtn.setAttribute('aria-label',open?'Menu sluiten':'Menu openen')});
+</script>
 </body>
 </html>
