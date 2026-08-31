@@ -53,19 +53,6 @@ footer{padding:56px 0 40px}.footer-grid{display:flex;justify-content:space-betwe
 .product-card-link:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
 </style>
 
-<style>
-.tincturen-index{padding:20px 0 80px}
-.tincturen-category{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;background:var(--straw);padding:28px;border-radius:10px}
-.tincturen-image{aspect-ratio:4/3;overflow:hidden;border-radius:6px}
-.tincturen-image img{width:100%;height:100%;object-fit:cover}
-.tincturen-info p{color:var(--ink-soft);margin:16px 0 24px;max-width:48ch}
-.tincturen-links{display:grid;gap:10px}
-.tinctuur-link{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:15px 18px;background:var(--linen);border:1px solid rgba(47,74,60,.14);border-radius:6px;text-decoration:none;color:var(--dike)}
-.tinctuur-link span{font-size:.82rem;color:var(--clay);white-space:nowrap}
-.tinctuur-link:hover{background:#fff}
-@media(max-width:760px){.tincturen-category{grid-template-columns:1fr;gap:28px}.tinctuur-link{align-items:flex-start;flex-direction:column;gap:4px}.tinctuur-link span{white-space:normal}}
-</style>
-
 </head>
 <body>
 <header>
@@ -74,7 +61,7 @@ footer{padding:56px 0 40px}.footer-grid{display:flex;justify-content:space-betwe
 <div class="nav-links"><ul><li><a href="#verhaal">Ons verhaal</a></li><li><a href="#producten">Producten</a></li><li><a href="producten.html">Productinformatie</a></li><li><a href="#werkwijze">Werkwijze</a></li></ul><a class="nav-cta" href="#bestellen">Neem contact op</a></div>
 <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu openen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
 </nav>
-<div class="mobile-menu" id="mobileMenu"><ul><li><a href="#verhaal">Ons verhaal</a></li><li><a href="#producten">Producten</a></li><li><a href="#werkwijze">Werkwijze</a></li><li><a class="nav-cta" href="#bestellen">Neem contact op</a></li></ul></div>
+<div class="mobile-menu" id="mobileMenu"><ul><li><a href="#verhaal">Ons verhaal</a></li><li><a href="#producten">Producten</a></li><li><a href="producten.html">Productinformatie</a></li><li><a href="#werkwijze">Werkwijze</a></li><li><a class="nav-cta" href="#bestellen">Neem contact op</a></li></ul></div>
 </header>
 
 <section class="hero"><div class="wrap hero-grid"><div>
@@ -90,36 +77,14 @@ footer{padding:56px 0 40px}.footer-grid{display:flex;justify-content:space-betwe
 <section class="story" id="verhaal"><div class="wrap story-grid"><div><span class="story-label">Ons verhaal</span><h2 class="display">Werken met wat de natuur je geeft.</h2></div><div><p>DijkKruid begint in onze eigen tuin. Kruiden en bloemen worden verzorgd, geoogst en verwerkt op kleine schaal. Zo weten we waar onze grondstoffen vandaan komen en blijft het proces persoonlijk.</p><p>Onze werkplek staat aan de Zuidendijk in Dordrecht. Wat in de tuin groeit, kan uiteindelijk terechtkomen in een zeep of kruidentinctuur.</p><p>Geen massaproductie, maar aandacht voor het seizoen, de plant en het eindproduct.</p></div></div></section>
 
 
-<section class="tincturen-index" id="tincturen">
-  <div class="wrap">
-    <div class="tincturen-category">
-      <div class="tincturen-image">
-        <img src="images/tincturen-sfeer.png" alt="DijkKruid tincturen — sfeerbeeld">
-      </div>
-      <div class="tincturen-info">
-        <span class="story-label">Categorie · Tincturen</span>
-        <h2 class="display">Kruiden uit eigen tuin, met aandacht verwerkt.</h2>
-        <p>Ontdek onze kleinschalige kruidentincturen. Bekijk per tinctuur de beschikbare productinformatie.</p>
-        <div class="tincturen-links">
-          <a href="producten.html#citroenmelisse-tinctuur" class="tinctuur-link">
-            <strong>Citroenmelisse tinctuur</strong><span>Bekijk productinformatie →</span>
-          </a>
-          <a href="producten.html#roos-tinctuur" class="tinctuur-link">
-            <strong>Roos tinctuur</strong><span>Bekijk productinformatie →</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="producten" id="producten"><div class="wrap"><div class="section-head"><span class="story-label">Wat wij maken</span><h2 class="display">Zelfzorg, met de hand gemaakt.</h2><p>Van natuurlijke olijfzepen tot kruidentincturen: kleine oplages, een rustige werkwijze en ingrediënten van biologische of natuurlijke herkomst waar mogelijk.</p></div>
 <div class="product-grid">
 <div class="product-card"><a class="product-photo" href="producten.html#olijf-lavendel" aria-label="Bekijk productinformatie Vette olijf & lavendel"><img src="images/olijf-lavendel.jpeg" alt="DijkKruid vette olijf lavendel zeep"></a><div class="product-copy"><h3>Vette olijf lavendel</h3><p>Ambachtelijke olijfzeep met lavendel.</p></div></div>
 <div class="product-card"><a class="product-photo" href="producten.html#olijf-roos" aria-label="Bekijk productinformatie Zachte olijf & roos"><img src="images/olijf-rozen.jpeg" alt="DijkKruid zachte olijf rozen zeep"></a><div class="product-copy"><h3>Zachte olijf rozen</h3><p>Zachte olijfzeep met rozenkarakter.</p></div></div>
 <div class="product-card"><a class="product-photo" href="producten.html#olijf-citronella" aria-label="Bekijk productinformatie Olijf & citronella"><img src="images/olijf-citronella.jpeg" alt="DijkKruid olijf citronella zeep"></a><div class="product-copy"><h3>Olijf citronella</h3><p>Olijfzeep met citronella.</p></div></div>
 <div class="product-card"><a class="product-photo" href="producten.html#pure-olijf" aria-label="Bekijk productinformatie Pure olijfzeep"><img src="images/olijfzeep.jpeg" alt="DijkKruid olijfzeep"></a><div class="product-copy"><h3>Olijfzeep</h3><p>Een pure, eenvoudige basis uit de collectie.</p></div></div>
-<div class="product-card"><div class="product-photo"><img src="images/dijkkruid-product.jpeg" alt="DijkKruid handgemaakt product"></div><div class="product-copy"><h3>Kruidentincturen</h3><p>Handgemaakte kruidenextracten uit eigen tuin. Beschikbaarheid wisselt met het seizoen.</p></div></div>
+<div class="product-card"><a class="product-photo" href="producten.html#tinctuur-citroenmelisse" aria-label="Bekijk productinformatie Citroenmelisse tinctuur"><img src="images/tinctuur-citroenmelisse.jpg" alt="DijkKruid citroenmelisse tinctuur in een glazen pot"></a><div class="product-copy"><h3>Citroenmelisse tinctuur</h3><p>Verfrissend kruidenextract, zelfgeoogst en getrokken op alcohol.</p><a class="product-link" href="producten.html#tinctuur-citroenmelisse">Bekijk productinformatie →</a></div></div>
+<div class="product-card"><a class="product-photo" href="producten.html#tinctuur-roos" aria-label="Bekijk productinformatie Roos tinctuur"><img src="images/tinctuur-roos.jpg" alt="DijkKruid roos tinctuur in een glazen pot"></a><div class="product-copy"><h3>Roos tinctuur</h3><p>Zacht en hartverwarmend kruidenextract van rozenblaadjes uit eigen tuin.</p><a class="product-link" href="producten.html#tinctuur-roos">Bekijk productinformatie →</a></div></div>
 <div class="product-card">
   <a class="product-photo" href="producten.html#lavendel" aria-label="Bekijk Overnight Handcrème Lavendel">
     <img src="images/overnight-handcreme-lavendel.png" alt="Overnight Handcrème Lavendel">
