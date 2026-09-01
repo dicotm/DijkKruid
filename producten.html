@@ -4,51 +4,73 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Productinformatie van DijkKruid: handgemaakte olijfzepen, Overnight Handcrème en kruidentincturen uit Dordrecht, waaronder citroenmelisse en roos.">
+<script>try{var t=localStorage.getItem('dijkkruid-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>DijkKruid — Productinformatie</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--linen:#FAF7EE;--dike:#2F4A3C;--leaf:#6B8552;--leaf-dark:#3E5B36;--clay:#A6714B;--straw:#EFE6CB;--sun:#EFC53E;--sun-soft:#FBEBB0;--ink:#232920;--ink-soft:#4B5548;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--linen);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65}.wrap{max-width:1120px;margin:0 auto;padding:0 32px}@media(max-width:640px){.wrap{padding:0 20px}}a{color:inherit}
+:root{--linen:#FAF7EE;--dike:#2F4A3C;--leaf:#6B8552;--leaf-dark:#3E5B36;--clay:#A6714B;--straw:#EFE6CB;--sun:#EFC53E;--sun-soft:#FBEBB0;--ink:#232920;--ink-soft:#4B5548;--white:#fff;--heading:var(--dike);--surface:#ffffff;--surface-alt:rgba(239,230,203,.24);--surface-alt2:#EFF2E8;--on-accent:#FAF7EE;color-scheme:light;}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--linen);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.65;transition:background .2s ease,color .2s ease}.wrap{max-width:1120px;margin:0 auto;padding:0 32px}@media(max-width:640px){.wrap{padding:0 20px}}a{color:inherit}
 header{position:sticky;top:0;z-index:50;background:rgba(250,247,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(47,74,60,.12)}
 nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
-.logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--dike);letter-spacing:-.01em;display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;color:var(--heading);letter-spacing:-.01em;display:flex;align-items:center;gap:10px;text-decoration:none}
 .logo img{width:34px;height:34px;object-fit:contain}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links ul{list-style:none;display:flex;gap:32px;font-size:.95rem;font-weight:500}
 .nav-links ul a{text-decoration:none;color:var(--ink-soft)}
-.nav-links ul a:hover{color:var(--dike)}
-.nav-cta{background:var(--dike);color:var(--linen);padding:10px 20px;border-radius:100px;font-size:.9rem;font-weight:600;text-decoration:none;white-space:nowrap}
-.menu-btn{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;align-items:center;justify-content:center;color:var(--dike)}
+.nav-links ul a:hover{color:var(--heading)}
+.nav-cta{background:var(--dike);color:var(--on-accent);padding:10px 20px;border-radius:100px;font-size:.9rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;width:40px;height:40px;align-items:center;justify-content:center;color:var(--heading)}
 .menu-btn svg{width:24px;height:24px}
 .mobile-menu{max-height:0;overflow:hidden;background:var(--linen);border-bottom:1px solid rgba(47,74,60,.12);transition:max-height .25s ease}
 .mobile-menu.open{max-height:320px}
 .mobile-menu ul{list-style:none;display:flex;flex-direction:column;padding:8px 20px 24px;gap:4px}
 .mobile-menu a{display:block;padding:12px 4px;text-decoration:none;color:var(--ink-soft);font-weight:500;border-bottom:1px solid rgba(47,74,60,.08)}
-.hero{padding:70px 0 38px}.hero-inner{max-width:850px}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--sun-soft);color:var(--leaf-dark);padding:7px 14px;border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}.crumbs{font-size:.88rem;color:var(--ink-soft);margin-bottom:18px}.crumbs a{text-decoration:none}.hero h1{font-family:'Fraunces',serif;color:var(--dike);font-weight:600;font-size:clamp(2.3rem,4.2vw,3.2rem);line-height:1.08;max-width:13ch}.hero h1 em{font-style:italic;color:var(--clay)}.hero p{margin-top:20px;max-width:65ch;color:var(--ink-soft);font-size:1.08rem}
-.catalog{padding:10px 0 70px}.section-head{max-width:680px;margin-bottom:30px}.section-head h2{font-family:'Fraunces',serif;font-weight:600;color:var(--dike);font-size:clamp(1.9rem,3.4vw,2.5rem);line-height:1.08}.section-head p{margin-top:12px;color:var(--ink-soft)}.product-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(47,74,60,.15);border:1px solid rgba(47,74,60,.15)}.product-nav a{background:var(--linen);border-radius:0;padding:18px 20px;text-decoration:none;color:var(--dike);font-weight:600;transition:background .2s}.product-nav a:hover{background:var(--straw)}.product-nav small{display:block;color:var(--clay);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
-.product{padding:45px 0 75px}.product:nth-of-type(even){background:rgba(239,230,203,.24)}.product-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:58px;align-items:start}.product-visual{position:sticky;top:105px;border-radius:20px;overflow:hidden;background:var(--white);border:1px solid rgba(47,74,60,.12);box-shadow:0 12px 35px rgba(47,74,60,.08)}.product-visual img{display:block;width:100%;height:auto}.product-copy h2{font-family:'Fraunces',serif;color:var(--dike);font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.05;max-width:14ch}.underline{width:80px;height:4px;background:var(--sun);margin:22px 0}.lead{font-size:1.12rem;color:var(--dike);margin-bottom:13px;font-weight:500}.intro{font-size:1rem;color:var(--ink-soft);max-width:64ch}.badges{display:flex;gap:14px;margin-top:25px;flex-wrap:wrap}.badge{display:flex;align-items:center;gap:9px;color:var(--dike);font-weight:600;font-size:.9rem}.badge-icon{width:42px;height:42px;border:1.5px solid var(--dike);border-radius:50%;display:grid;place-items:center}
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.info-card{background:rgba(255,255,255,.76);border:1px solid rgba(47,74,60,.13);border-radius:16px;padding:24px}.info-card h3{font-family:'Fraunces',serif;color:var(--dike);font-size:1.35rem;margin-bottom:12px}.info-card h3:after{content:"";display:block;width:34px;height:3px;background:var(--sun);margin-top:9px}.info-card p{color:var(--ink-soft);margin-bottom:9px}.info-card p:last-child{margin-bottom:0}.info-card strong{color:var(--dike)}.muted{font-size:.86rem;color:var(--ink-soft);opacity:.9}
-.notice{margin:10px 0 65px;background:#EFF2E8;border-radius:18px;padding:25px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}.notice p{color:var(--dike);max-width:780px}.button{display:inline-block;background:var(--dike);color:#fff;text-decoration:none;font-weight:600;padding:14px 24px;border-radius:999px;white-space:nowrap}
+.hero{padding:70px 0 38px}.hero-inner{max-width:850px}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--sun-soft);color:var(--leaf-dark);padding:7px 14px;border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}.crumbs{font-size:.88rem;color:var(--ink-soft);margin-bottom:18px}.crumbs a{text-decoration:none}.hero h1{font-family:'Fraunces',serif;color:var(--heading);font-weight:600;font-size:clamp(2.3rem,4.2vw,3.2rem);line-height:1.08;max-width:13ch}.hero h1 em{font-style:italic;color:var(--clay)}.hero p{margin-top:20px;max-width:65ch;color:var(--ink-soft);font-size:1.08rem}
+.catalog{padding:10px 0 70px}.section-head{max-width:680px;margin-bottom:30px}.section-head h2{font-family:'Fraunces',serif;font-weight:600;color:var(--heading);font-size:clamp(1.9rem,3.4vw,2.5rem);line-height:1.08}.section-head p{margin-top:12px;color:var(--ink-soft)}.product-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(47,74,60,.15);border:1px solid rgba(47,74,60,.15)}.product-nav a{background:var(--linen);border-radius:0;padding:18px 20px;text-decoration:none;color:var(--heading);font-weight:600;transition:background .2s}.product-nav a:hover{background:var(--straw)}.product-nav small{display:block;color:var(--clay);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+.product{padding:45px 0 75px}.product:nth-of-type(even){background:var(--surface-alt,rgba(239,230,203,.24))}.product-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:58px;align-items:start}.product-visual{position:sticky;top:105px;border-radius:20px;overflow:hidden;background:var(--surface);border:1px solid rgba(47,74,60,.12);box-shadow:0 12px 35px rgba(47,74,60,.08)}.product-visual img{display:block;width:100%;height:auto}.product-copy h2{font-family:'Fraunces',serif;color:var(--heading);font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.05;max-width:14ch}.underline{width:80px;height:4px;background:var(--sun);margin:22px 0}.lead{font-size:1.12rem;color:var(--heading);margin-bottom:13px;font-weight:500}.intro{font-size:1rem;color:var(--ink-soft);max-width:64ch}.badges{display:flex;gap:14px;margin-top:25px;flex-wrap:wrap}.badge{display:flex;align-items:center;gap:9px;color:var(--heading);font-weight:600;font-size:.9rem}.badge-icon{width:42px;height:42px;border:1.5px solid var(--heading);border-radius:50%;display:grid;place-items:center}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.info-card{background:var(--surface);border:1px solid rgba(47,74,60,.13);border-radius:16px;padding:24px}.info-card h3{font-family:'Fraunces',serif;color:var(--heading);font-size:1.35rem;margin-bottom:12px}.info-card h3:after{content:"";display:block;width:34px;height:3px;background:var(--sun);margin-top:9px}.info-card p{color:var(--ink-soft);margin-bottom:9px}.info-card p:last-child{margin-bottom:0}.info-card strong{color:var(--heading)}.muted{font-size:.86rem;color:var(--ink-soft);opacity:.9}
+.notice{margin:10px 0 65px;background:var(--surface-alt2,#EFF2E8);border-radius:18px;padding:25px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}.notice p{color:var(--heading);max-width:780px}.button{display:inline-block;background:var(--dike);color:var(--on-accent);text-decoration:none;font-weight:600;padding:14px 24px;border-radius:999px;white-space:nowrap}
 @media(max-width:1000px){.product-nav{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:1fr;gap:30px}.product-visual{position:relative;top:auto;max-width:700px}.info-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.nav-links{display:none}.menu-btn{display:flex}}
 @media(max-width:700px){.wrap{padding:0 20px}nav.wrap{height:70px}.hero{padding:45px 0 25px}.hero h1{font-size:2.75rem}.product-nav{grid-template-columns:1fr}.product{padding:34px 0 55px}.info-grid{grid-template-columns:1fr}.notice{align-items:flex-start;flex-direction:column;padding:21px}.button{width:100%;text-align:center}.product-copy h2{font-size:2.45rem}}
+
+/* ---- Theme toggle ---- */
+.theme-toggle{background:none;border:1.5px solid rgba(47,74,60,.35);color:var(--heading);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;padding:0}
+.theme-toggle svg{width:18px;height:18px}
+.theme-toggle .icon-moon{display:none}
+[data-theme="dark"] .theme-toggle .icon-sun{display:none}
+[data-theme="dark"] .theme-toggle .icon-moon{display:block}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme-toggle .icon-sun{display:none}:root:not([data-theme="light"]) .theme-toggle .icon-moon{display:block}}
+.mobile-menu .theme-toggle{margin:10px 4px 4px;border-color:rgba(47,74,60,.3)}
+
+/* ---- Fix: CTA button inside mobile menu was losing its light text to the more specific .mobile-menu a rule ---- */
+.mobile-menu a.nav-cta{color:var(--on-accent)}
+
+/* ---- Dark theme palette: explicit toggle ---- */
+[data-theme="dark"]{--linen:#1B1E17;--ink:#EDEADF;--ink-soft:#B7BFA9;--straw:#2B2F22;--heading:#F1E3B4;--leaf-dark:#7FA05F;--clay:#D2996A;--sun-soft:#3A3320;--surface:#242820;--surface-alt:rgba(36,40,32,.55);--surface-alt2:#232922;--white:#242820;color-scheme:dark;}
+[data-theme="dark"] header{background:rgba(27,30,23,.88)}
+
+/* ---- Dark theme palette: automatic, only when the visitor hasn't chosen a preference ---- */
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--linen:#1B1E17;--ink:#EDEADF;--ink-soft:#B7BFA9;--straw:#2B2F22;--heading:#F1E3B4;--leaf-dark:#7FA05F;--clay:#D2996A;--sun-soft:#3A3320;--surface:#242820;--surface-alt:rgba(36,40,32,.55);--surface-alt2:#232922;--white:#242820;color-scheme:dark;}
+  :root:not([data-theme="light"]) header{background:rgba(27,30,23,.88)}
+}
 </style>
 </head>
 <body>
 <header>
 <nav class="wrap">
 <a href="index.html" class="logo"><img src="images/dijkkruid-logo.png" alt="DijkKruid logo">DijkKruid</a>
-<div class="nav-links"><ul><li><a href="index.html#verhaal">Ons verhaal</a></li><li><a href="index.html#producten">Producten</a></li><li><a href="producten.html">Productinformatie</a></li><li><a href="index.html#werkwijze">Werkwijze</a></li></ul><a class="nav-cta" href="index.html#bestellen">Neem contact op</a></div>
+<div class="nav-links"><ul><li><a href="index.html#verhaal">Ons verhaal</a></li><li><a href="index.html#producten">Producten</a></li><li><a href="producten.html">Productinformatie</a></li><li><a href="index.html#werkwijze">Werkwijze</a></li></ul><button class="theme-toggle" id="themeToggle" type="button" aria-label="Wissel tussen licht en donker thema"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button><a class="nav-cta" href="index.html#bestellen">Neem contact op</a></div>
 <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu openen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
 </nav>
-<div class="mobile-menu" id="mobileMenu"><ul><li><a href="index.html#verhaal">Ons verhaal</a></li><li><a href="index.html#producten">Producten</a></li><li><a href="producten.html">Productinformatie</a></li><li><a href="index.html#werkwijze">Werkwijze</a></li><li><a class="nav-cta" href="index.html#bestellen">Neem contact op</a></li></ul></div>
+<div class="mobile-menu" id="mobileMenu"><ul><li><a href="index.html#verhaal">Ons verhaal</a></li><li><a href="index.html#producten">Producten</a></li><li><a href="producten.html">Productinformatie</a></li><li><a href="index.html#werkwijze">Werkwijze</a></li><li><button class="theme-toggle" id="themeToggleMobile" type="button" aria-label="Wissel tussen licht en donker thema"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li><li><a class="nav-cta" href="index.html#bestellen">Neem contact op</a></li></ul></div>
 </header>
 
 <main>
 <section class="hero"><div class="wrap hero-inner">
-<div class="crumbs"><a href="index.html">Home</a> &nbsp;›&nbsp; Productinformatie</div>
 <span class="eyebrow">DijkKruid productinformatie</span>
 <h1>Van <em>ingrediënt</em> tot eindproduct.</h1>
 <p>Op deze pagina vind je per DijkKruid-product dezelfde vaste opbouw: wat het product is, welke ingrediënten we vermelden, achtergrondinformatie en hoe je het gebruikt. Zo kun je rustig per product de informatie bekijken.</p>
@@ -96,6 +118,16 @@ nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76
 const menuBtn=document.getElementById('menuBtn');
 const mobileMenu=document.getElementById('mobileMenu');
 menuBtn.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);menuBtn.setAttribute('aria-label',open?'Menu sluiten':'Menu openen')});
+
+function systemPrefersDark(){return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}
+function currentTheme(){return document.documentElement.getAttribute('data-theme')||(systemPrefersDark()?'dark':'light');}
+function setTheme(theme){
+  document.documentElement.setAttribute('data-theme',theme);
+  try{localStorage.setItem('dijkkruid-theme',theme);}catch(e){}
+}
+function toggleTheme(){setTheme(currentTheme()==='dark'?'light':'dark');}
+document.getElementById('themeToggle').addEventListener('click',toggleTheme);
+document.getElementById('themeToggleMobile').addEventListener('click',toggleTheme);
 </script>
 </body>
 </html>
