@@ -1,0 +1,315 @@
+{
+  "settings": {
+    "shopEnabled": true
+  },
+  "products": [
+    {
+      "id": "lavendel-overnight",
+      "name": "Overnight Handcrème — Lavendel",
+      "category": "Handverzorging",
+      "price": 9.95,
+      "status": "available",
+      "image": "images/overnight-handcreme-lavendel.png",
+      "summary": "**Olijf & lavendel** — een zachte, natuurlijke combinatie.\nSheaboter, cacaoboter, kokosolie, bijenwas en etherische olie van wilde lavendel.",
+      "lead": "Olijf & lavendel — een zachte, natuurlijke combinatie.",
+      "intro": "Een verzorgende handcrème die je handen ’s avonds de voeding geeft die ze verdienen. Rijk aan sheaboter, cacaoboter en kokosolie, in combinatie met de etherische olie van wilde lavendel.",
+      "badges": [
+        "Natuurlijke ingrediënten",
+        "Met de hand gemaakt",
+        "Kruiden uit eigen tuin"
+      ],
+      "sections": [
+        {
+          "title": "Ingrediënten",
+          "text": [
+            "Sheaboter, Cacaoboter, Kokosolie, Bijenwas, Etherische olie Lavendel.",
+            "**Sheaboter:** vitamine A en E en een hydraterende werking.",
+            "**Cacaoboter:** helpt bij huidirritaties en hydraterende werking.",
+            "**Kokosolie:** antibacterieel en ontstekingsremmend.",
+            "**Bijenwas:** helpt bij het vasthouden van de hydratatie.",
+            "**Etherische olie:** Wild lavendel Vera: Lavendula Angustifolia van distillerie Florihana."
+          ]
+        },
+        {
+          "title": "Achtergrond",
+          "text": [
+            "Een veelzijdige olie: kalmerend en ontspannend, licht pijnverdoovend, desinfecterend en wond genezend, licht schimmeldodend en antibacterieel."
+          ]
+        },
+        {
+          "title": "Gebruik",
+          "text": [
+            "Gebruik kan op elk moment van de dag, maar vanwege de “vette” laag zeer geschikt om ’s avonds voor het slapen de handen in te smeren en rustig in te laten trekken."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sweet-orange",
+      "name": "Overnight Handcrème — Sweet Orange",
+      "category": "Handverzorging",
+      "price": 9.95,
+      "status": "available",
+      "image": "images/overnight-handcreme-sweet-orange.png",
+      "summary": "Sheaboter, cacaoboter, kokosolie, bijenwas en etherische olie van zoete sinaasappel.",
+      "lead": "Olijf & sweet orange — een verzorgende, frisse combinatie.",
+      "intro": "Een rijke handcrème voor de verzorging van droge handen. De basis van sheaboter, cacaoboter, kokosolie en bijenwas wordt gecombineerd met etherische olie van Sweet Orange.",
+      "badges": [
+        "Natuurlijke ingrediënten",
+        "Met de hand gemaakt",
+        "Kruiden uit eigen tuin"
+      ],
+      "sections": [
+        {
+          "title": "Ingrediënten",
+          "text": [
+            "Sheaboter, Cacaoboter, Kokosolie, Bijenwas, Etherische olie Sweet Orange.",
+            "**Sheaboter:** vitamine A en E en een hydraterende werking.",
+            "**Cacaoboter:** helpt bij huidirritaties en hydraterende werking.",
+            "**Kokosolie:** antibacterieel en ontstekingsremmend.",
+            "**Bijenwas:** helpt bij het vasthouden van de hydratatie.",
+            "**Etherische olie:** Sweet Orange, Citrus Sinensis van distillerie Florihana."
+          ]
+        },
+        {
+          "title": "Achtergrond",
+          "text": [
+            "Opbeurend, kalmerend en ontspannend, verzorgend bij een droge en nerveuze huid.",
+            "De frisse, zoete geur maakt deze crème prettig voor dagelijks gebruik."
+          ]
+        },
+        {
+          "title": "Gebruik",
+          "text": [
+            "Breng ’s avonds een kleine hoeveelheid crème aan op schone, droge handen. Masseer rustig in en laat de crème intrekken. Door de rijke, vette laag is de crème zeer geschikt als avondverzorging."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "olijf-lavendel",
+      "name": "Vette olijf & lavendel",
+      "category": "Olijfzeep",
+      "price": 5.5,
+      "status": "available",
+      "image": "images/olijf-lavendel.jpeg",
+      "summary": "Ambachtelijke olijfzeep met lavendel.",
+      "lead": "Een ambachtelijke olijfzeep met lavendel.",
+      "intro": "Een handgemaakt DijkKruid-product uit de olijfzeepcollectie. De productinformatie hieronder volgt het etiket van dit product.",
+      "badges": [
+        "Handgemaakt",
+        "Olijfolie",
+        "Lavendel"
+      ],
+      "sections": [
+        {
+          "title": "Ingrediënten",
+          "text": [
+            "Extra Vierge Olijfolie.",
+            "Etherische olie: lavendel."
+          ]
+        },
+        {
+          "title": "Over het product",
+          "text": [
+            "Een eenvoudige olijfzeep waarin olijfolie en lavendel centraal staan.",
+            "~ Meer productspecificaties kunnen worden toegevoegd zodra deze beschikbaar zijn."
+          ]
+        },
+        {
+          "title": "Gebruik",
+          "text": [
+            "Gebruik als hand- en lichaamszeep. Bewaar de zeep na gebruik zo droog mogelijk."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "olijf-roos",
+      "name": "Zachte olijf & roos",
+      "category": "Olijfzeep",
+      "price": 5.5,
+      "status": "available",
+      "image": "images/olijf-rozen.jpeg",
+      "summary": "Zachte olijfzeep met rozenkarakter.",
+      "lead": "Een zachte olijfzeep met een rozenkarakter.",
+      "intro": "Een handgemaakt DijkKruid-product uit de olijfzeepcollectie. De productinformatie hieronder kan verder worden aangevuld met de exacte productgegevens van het etiket.",
+      "badges": [
+        "Handgemaakt",
+        "Olijfolie",
+        "Roos"
+      ],
+      "sections": [
+        {
+          "title": "Ingrediënten",
+          "text": [
+            "Voor de exacte ingrediëntenlijst gebruiken we de productinformatie op het etiket.",
+            "~ Stuur de ingrediëntenlijst door als je deze volledig op de website wilt tonen."
+          ]
+        },
+        {
+          "title": "Over het product",
+          "text": [
+            "Zachte olijfzeep met rozenkarakter, met de hand gemaakt in kleine oplage."
+          ]
+        },
+        {
+          "title": "Gebruik",
+          "text": [
+            "Gebruik als hand- en lichaamszeep. Laat de zeep na gebruik goed drogen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "olijf-citronella",
+      "name": "Olijf & citronella",
+      "category": "Olijfzeep",
+      "price": 5.5,
+      "status": "available",
+      "image": "images/olijf-citronella.jpeg",
+      "summary": "Olijfzeep met citronella.",
+      "lead": "Olijfzeep met citronella.",
+      "intro": "Een handgemaakt DijkKruid-product uit de olijfzeepcollectie. De exacte productgegevens worden per productlabel bijgehouden.",
+      "badges": [
+        "Handgemaakt",
+        "Olijfolie",
+        "Citronella"
+      ],
+      "sections": [
+        {
+          "title": "Ingrediënten",
+          "text": [
+            "Extra Vierge Olijfolie.",
+            "Etherische olie: citronella."
+          ]
+        },
+        {
+          "title": "Over het product",
+          "text": [
+            "Een olijfzeep met citronella, gemaakt in kleine oplage."
+          ]
+        },
+        {
+          "title": "Gebruik",
+          "text": [
+            "Gebruik als hand- en lichaamszeep. Laat de zeep na gebruik goed drogen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pure-olijf",
+      "name": "Pure olijfzeep",
+      "category": "Olijfzeep",
+      "price": 5.0,
+      "status": "available",
+      "image": "images/olijfzeep.jpeg",
+      "summary": "Een pure, eenvoudige basis uit de collectie.",
+      "lead": "Een pure, eenvoudige basis uit de collectie.",
+      "intro": "Een handgemaakt olijfzeep-product van DijkKruid. Voor dit product tonen we alleen informatie die als productgegeven beschikbaar is.",
+      "badges": [
+        "Handgemaakt",
+        "Olijfolie",
+        "Eenvoudig"
+      ],
+      "sections": [
+        {
+          "title": "Ingrediënten",
+          "text": [
+            "Biologische olijfolie.",
+            "~ Een volledige ingrediëntenlijst kan worden toegevoegd wanneer deze beschikbaar is."
+          ]
+        },
+        {
+          "title": "Over het product",
+          "text": [
+            "Een eenvoudige olijfzeep uit de DijkKruid-collectie."
+          ]
+        },
+        {
+          "title": "Gebruik",
+          "text": [
+            "Gebruik als hand- en lichaamszeep. Bewaar de zeep na gebruik zo droog mogelijk."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tinctuur-citroenmelisse",
+      "name": "Citroenmelisse tinctuur",
+      "category": "Tinctuur",
+      "price": 14.95,
+      "status": "available",
+      "image": "images/tinctuur-citroenmelisse.jpg",
+      "summary": "Verfrissend kruidenextract, zelfgeoogst en getrokken op alcohol.",
+      "lead": "Tinctuur van citroenmelisse, gemaakt met wat de natuur geeft.",
+      "intro": "Een DijkKruid-tinctuur waarin citroenmelisse centraal staat. Op het oorspronkelijke batchlabel staat “Citroen melisse 40%” en de datum 21-6-21.",
+      "badges": [
+        "Handgemaakt",
+        "Citroenmelisse",
+        "Kleine oplage"
+      ],
+      "sections": [
+        {
+          "title": "Ingrediënt",
+          "text": [
+            "Citroenmelisse.",
+            "**Op het label:** 40%."
+          ]
+        },
+        {
+          "title": "Over het product",
+          "text": [
+            "Een tinctuur in de maak, passend bij DijkKruid: werken met wat de natuur geeft.",
+            "~ Batchlabel: 21-6-21."
+          ]
+        },
+        {
+          "title": "Productinformatie",
+          "text": [
+            "De exacte gebruiksinstructie en verdere productspecificaties kunnen hier worden toegevoegd zodra je die aanlevert."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tinctuur-roos",
+      "name": "Roos tinctuur",
+      "category": "Tinctuur",
+      "price": 14.95,
+      "status": "available",
+      "image": "images/tinctuur-roos.jpg",
+      "summary": "Zacht en hartverwarmend kruidenextract van rozenblaadjes uit eigen tuin.",
+      "lead": "Tinctuur van roos, gemaakt met wat de natuur geeft.",
+      "intro": "Een DijkKruid-tinctuur waarin roos centraal staat. Op het oorspronkelijke batchlabel staat “Roos 40%” en de datum 27-6-21.",
+      "badges": [
+        "Handgemaakt",
+        "Roos",
+        "Kleine oplage"
+      ],
+      "sections": [
+        {
+          "title": "Ingrediënt",
+          "text": [
+            "Roos.",
+            "**Op het label:** 40%."
+          ]
+        },
+        {
+          "title": "Over het product",
+          "text": [
+            "Een tinctuur in de maak, passend bij DijkKruid: werken met wat de natuur geeft.",
+            "~ Batchlabel: 27-6-21."
+          ]
+        },
+        {
+          "title": "Productinformatie",
+          "text": [
+            "De exacte gebruiksinstructie en verdere productspecificaties kunnen hier worden toegevoegd zodra je die aanlevert."
+          ]
+        }
+      ]
+    }
+  ]
+}

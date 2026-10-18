@@ -1,7 +1,7 @@
 /* DijkKruid winkelmand
  * ---------------------------------------------------------------
  * Eén bestand voor de hele webshop-voorbereiding:
- *  - productlijst met prijzen (hieronder, in PRODUCTS)
+ *  - gebruikt de producten en prijzen uit products.json
  *  - winkelmand (onthoudt de keuze in de browser van de bezoeker)
  *  - winkelmandknop in de header + uitschuifbare winkelmand
  *  - "In winkelmand"-knoppen op de productkaarten en productpagina's
@@ -12,27 +12,13 @@
 
   /* ============ INSTELLINGEN ============ */
 
-  // Zet op false om de hele webshop (knoppen, prijzen, winkelmand) te verbergen.
-  var SHOP_ENABLED = true;
-
   // Zet op true zodra afrekenen werkt, en vul startCheckout() hieronder in.
   var CHECKOUT_ENABLED = false;
 
-  /* PRIJZEN: dit zijn VOORBEELDPRIJZEN. Pas ze aan voordat je de site live zet.
-   * Prijzen staan in euro-centen: 995 = € 9,95. De id moet gelijk zijn aan het
-   * id van het product in producten.html. */
-  var PRODUCTS = [
-    { id: 'lavendel-overnight',      name: 'Overnight Handcrème — Lavendel',     price: 995,  image: 'images/overnight-handcreme-lavendel.png' },
-    { id: 'sweet-orange',            name: 'Overnight Handcrème — Sweet Orange', price: 995,  image: 'images/overnight-handcreme-sweet-orange.png' },
-    { id: 'olijf-lavendel',          name: 'Vette olijf & lavendel zeep',        price: 550,  image: 'images/olijf-lavendel.jpeg' },
-    { id: 'olijf-roos',              name: 'Zachte olijf & roos zeep',           price: 550,  image: 'images/olijf-rozen.jpeg' },
-    { id: 'olijf-citronella',        name: 'Olijf & citronella zeep',            price: 550,  image: 'images/olijf-citronella.jpeg' },
-    { id: 'pure-olijf',              name: 'Pure olijfzeep',                     price: 500,  image: 'images/olijfzeep.jpeg' },
-    { id: 'tinctuur-citroenmelisse', name: 'Citroenmelisse tinctuur',            price: 1495, image: 'images/tinctuur-citroenmelisse.jpg' },
-    { id: 'tinctuur-roos',           name: 'Roos tinctuur',                      price: 1495, image: 'images/tinctuur-roos.jpg' }
-  ];
-
-  if (!SHOP_ENABLED) return;
+  /* De producten en prijzen komen uit products.json (via catalog.js).
+   * Pas ze aan met beheer.html. Of de webshop zichtbaar is, staat ook in
+   * products.json (settings.shopEnabled). */
+  var PRODUCTS = []; // wordt gevuld zodra products.json geladen is
 
   /* ============ HULPFUNCTIES ============ */
 
@@ -47,6 +33,9 @@
     for (var i = 0; i < PRODUCTS.length; i++) if (PRODUCTS[i].id === id) return PRODUCTS[i];
     return null;
   }
+
+  // Alleen beschikbare producten met een prijs kunnen in de winkelmand.
+  function isBuyable(p) { return !!p && p.status === 'available' && p.price != null; }
 
   function el(tag, attrs, children) {
     var node = document.createElement(tag);
@@ -66,7 +55,7 @@
     if (raw && typeof raw === 'object') {
       Object.keys(raw).forEach(function (id) {
         var qty = parseInt(raw[id], 10);
-        if (findProduct(id) && qty > 0) clean[id] = Math.min(qty, MAX_QTY);
+        if (isBuyable(findProduct(id)) && qty > 0) clean[id] = Math.min(qty, MAX_QTY);
       });
     }
     return clean;
@@ -102,7 +91,7 @@
     var cart = load(), items = [], total = 0, count = 0;
     PRODUCTS.forEach(function (p) {
       var qty = cart[p.id];
-      if (!qty) return;
+      if (!qty || !isBuyable(p)) return;
       var line = p.price * qty;
       items.push({ id: p.id, name: p.name, image: p.image, unitPrice: p.price, qty: qty, lineTotal: line });
       total += line; count += qty;
@@ -141,6 +130,8 @@
   function injectStyles() {
     var css = [
       '.shop-buy{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px}',
+      '.product-card .shop-buy{justify-content:space-between;flex-wrap:nowrap}',
+      '.shop-soldout{font-weight:600;font-size:.9rem;color:var(--ink-soft);border:1.5px dashed rgba(47,74,60,.4);border-radius:100px;padding:8px 16px}',
       '.shop-price{font-family:"Fraunces",serif;font-weight:600;font-size:1.25rem;color:var(--heading)}',
       '.add-to-cart{background:var(--dike);color:var(--on-accent);border:0;border-radius:100px;padding:11px 20px;font:600 .92rem "Work Sans",sans-serif;cursor:pointer;transition:transform .15s ease,background .2s}',
       '.add-to-cart:hover{transform:translateY(-1px)}',
@@ -315,6 +306,10 @@
   /* ============ KNOPPEN OP DE PRODUCTEN ============ */
 
   function buyBlock(product) {
+    if (product.price == null) return null;
+    if (product.status === 'soldout') {
+      return el('div', { class: 'shop-buy' }, [el('span', { class: 'shop-price', text: fmt(product.price) }), el('span', { class: 'shop-soldout', text: 'Tijdelijk uitverkocht' })]);
+    }
     var btn = el('button', { class: 'add-to-cart', type: 'button', text: 'In winkelmand', 'aria-label': product.name + ' in winkelmand' });
     var timer;
     btn.addEventListener('click', function () {
@@ -329,21 +324,19 @@
   }
 
   function mountBuyButtons() {
-    // Startpagina: kaarten die naar producten.html#id verwijzen
-    document.querySelectorAll('.product-card').forEach(function (card) {
-      var link = card.querySelector('a[href*="producten.html#"]');
+    // Startpagina: kaarten. Productpagina: secties. Beide krijgen data-product van catalog.js.
+    document.querySelectorAll('.product-card[data-product]').forEach(function (card) {
       var copy = card.querySelector('.product-copy');
-      if (!link || !copy) return;
-      var product = findProduct(link.getAttribute('href').split('#')[1]);
-      if (product) copy.appendChild(buyBlock(product));
+      var block = findProduct(card.getAttribute('data-product'));
+      block = block && buyBlock(block);
+      if (copy && block) copy.appendChild(block);
     });
-    // Productpagina: elke productsectie met een bekend id
-    document.querySelectorAll('section.product[id]').forEach(function (section) {
-      var product = findProduct(section.id);
+    document.querySelectorAll('section.product[data-product]').forEach(function (section) {
       var copy = section.querySelector('.product-copy');
-      if (!product || !copy) return;
+      var block = findProduct(section.getAttribute('data-product'));
+      block = block && buyBlock(block);
+      if (!copy || !block) return;
       var back = copy.querySelector('.back-link');
-      var block = buyBlock(product);
       if (back) copy.insertBefore(block, back); else copy.appendChild(block);
     });
   }
@@ -351,12 +344,20 @@
   /* ============ START ============ */
 
   function init() {
-    injectStyles();
-    buildCartButton();
-    buildDrawer();
-    mountBuyButtons();
-    render();
-    window.addEventListener('storage', function (e) { if (e.key === STORAGE_KEY) render(); });
+    if (!window.DijkKruidCatalog) return;
+    window.DijkKruidCatalog.ready.then(function (data) {
+      if (data.settings.shopEnabled === false) return; // webshop uitgeschakeld in products.json
+      PRODUCTS = data.products.map(function (p) {
+        return { id: p.id, name: p.name, image: p.image, status: p.status,
+                 price: p.price == null ? null : Math.round(p.price * 100) };
+      });
+      injectStyles();
+      buildCartButton();
+      buildDrawer();
+      mountBuyButtons();
+      render();
+      window.addEventListener('storage', function (e) { if (e.key === STORAGE_KEY) render(); });
+    }).catch(function () { /* producten niet geladen: geen webshop */ });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

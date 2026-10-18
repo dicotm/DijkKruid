@@ -6,10 +6,11 @@
 <meta name="description" content="DijkKruid — handgemaakte natuurlijke zelfzorgproducten uit eigen tuin aan de Zuidendijk in Dordrecht.">
 <script>try{var t=localStorage.getItem('dijkkruid-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <title>DijkKruid — Handgemaakte natuurlijke zelfzorgproducten</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/fraunces-latin-var.woff') format('woff')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:400 700;font-display:swap;src:url('fonts/fraunces-italic-latin-var.woff') format('woff')}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url('fonts/worksans-latin-var.woff') format('woff')}
+@font-face{font-family:'Work Sans';font-style:italic;font-weight:400 700;font-display:swap;src:url('fonts/worksans-italic-latin-var.woff') format('woff')}
 :root{--linen:#FAF7EE;--dike:#2F4A3C;--leaf:#6B8552;--leaf-dark:#3E5B36;--clay:#A6714B;--straw:#EFE6CB;--sun:#EFC53E;--sun-soft:#FBEBB0;--ink:#232920;--ink-soft:#4B5548;--heading:var(--dike);--surface:#ffffff;--on-accent:#FAF7EE;color-scheme:light;}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--linen);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.55;overflow-x:hidden;transition:background .2s ease,color .2s ease}
 h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:600;color:var(--heading);line-height:1.08}a{color:inherit}img{display:block;max-width:100%}
@@ -77,6 +78,12 @@ footer{padding:56px 0 40px}.footer-grid{display:flex;justify-content:space-betwe
   :root:not([data-theme="light"]) .footer-col a,:root:not([data-theme="light"]) .footer-col p{color:var(--heading)}
 }
 
+
+/* ---- Kaarten: link, prijs en knop staan altijd onderaan op dezelfde plek ---- */
+.product-card{display:flex;flex-direction:column}
+.product-copy{flex:1;display:flex;flex-direction:column}
+.product-link{align-self:flex-start;margin-top:auto;padding-top:14px}
+.footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 </style>
 
 </head>
@@ -108,31 +115,8 @@ footer{padding:56px 0 40px}.footer-grid{display:flex;justify-content:space-betwe
 
 
 <section class="producten" id="producten"><div class="wrap"><div class="section-head"><span class="story-label">Wat wij maken</span><h2 class="display">Zelfzorg, met de hand gemaakt.</h2><p>Van natuurlijke olijfzepen tot kruidentincturen: kleine oplages, een rustige werkwijze en ingrediënten van biologische of natuurlijke herkomst waar mogelijk.</p></div>
-<div class="product-grid">
-<div class="product-card"><a class="product-photo" href="producten.html#olijf-lavendel" aria-label="Bekijk productinformatie Vette olijf & lavendel"><img src="images/olijf-lavendel.jpeg" alt="DijkKruid vette olijf lavendel zeep"></a><div class="product-copy"><h3>Vette olijf lavendel</h3><p>Ambachtelijke olijfzeep met lavendel.</p></div></div>
-<div class="product-card"><a class="product-photo" href="producten.html#olijf-roos" aria-label="Bekijk productinformatie Zachte olijf & roos"><img src="images/olijf-rozen.jpeg" alt="DijkKruid zachte olijf rozen zeep"></a><div class="product-copy"><h3>Zachte olijf rozen</h3><p>Zachte olijfzeep met rozenkarakter.</p></div></div>
-<div class="product-card"><a class="product-photo" href="producten.html#olijf-citronella" aria-label="Bekijk productinformatie Olijf & citronella"><img src="images/olijf-citronella.jpeg" alt="DijkKruid olijf citronella zeep"></a><div class="product-copy"><h3>Olijf citronella</h3><p>Olijfzeep met citronella.</p></div></div>
-<div class="product-card"><a class="product-photo" href="producten.html#pure-olijf" aria-label="Bekijk productinformatie Pure olijfzeep"><img src="images/olijfzeep.jpeg" alt="DijkKruid olijfzeep"></a><div class="product-copy"><h3>Olijfzeep</h3><p>Een pure, eenvoudige basis uit de collectie.</p></div></div>
-<div class="product-card"><a class="product-photo" href="producten.html#tinctuur-citroenmelisse" aria-label="Bekijk productinformatie Citroenmelisse tinctuur"><img src="images/tinctuur-citroenmelisse.jpg" alt="DijkKruid citroenmelisse tinctuur in een glazen pot"></a><div class="product-copy"><h3>Citroenmelisse tinctuur</h3><p>Verfrissend kruidenextract, zelfgeoogst en getrokken op alcohol.</p><a class="product-link" href="producten.html#tinctuur-citroenmelisse">Bekijk productinformatie →</a></div></div>
-<div class="product-card"><a class="product-photo" href="producten.html#tinctuur-roos" aria-label="Bekijk productinformatie Roos tinctuur"><img src="images/tinctuur-roos.jpg" alt="DijkKruid roos tinctuur in een glazen pot"></a><div class="product-copy"><h3>Roos tinctuur</h3><p>Zacht en hartverwarmend kruidenextract van rozenblaadjes uit eigen tuin.</p><a class="product-link" href="producten.html#tinctuur-roos">Bekijk productinformatie →</a></div></div>
-<div class="product-card">
-  <a class="product-photo" href="producten.html#lavendel-overnight" aria-label="Bekijk Overnight Handcrème Lavendel">
-    <img src="images/overnight-handcreme-lavendel.png" alt="Overnight Handcrème Lavendel">
-  </a>
-  <div class="product-copy">
-    <h3>Overnight Handcrème — Lavendel</h3>
-    <p><b>Olijf &amp; lavendel</b> — een zachte, natuurlijke combinatie.</p>
-    <p>Sheaboter, cacaoboter, kokosolie, bijenwas en etherische olie van wilde lavendel.</p>
-    <a class="product-link" href="producten.html#lavendel-overnight">Bekijk productinformatie →</a>
-  </div>
-</div>
-<div class="product-card">
-  <a class="product-photo" href="producten.html#sweet-orange" aria-label="Bekijk Overnight Handcrème Sweet Orange">
-    <img src="images/overnight-handcreme-sweet-orange.png" alt="Productinformatie Overnight Handcrème Sweet Orange">
-  </a>
-  <div class="product-copy"><h3>Overnight Handcrème — Sweet Orange</h3><p>Sheaboter, cacaoboter, kokosolie, bijenwas en etherische olie van zoete sinaasappel.</p><a class="product-link" href="producten.html#sweet-orange">Bekijk productinformatie →</a></div>
-</div>
-<div class="product-card"><div class="product-photo"><img src="images/dijkkruid-logo.png" alt="DijkKruid logo"></div><div class="product-copy"><h3>Uit eigen tuin</h3><p>Het assortiment groeit met wat er in de tuin groeit en wat we met aandacht kunnen maken.</p></div></div>
+<div class="product-grid" id="productGrid" aria-live="polite">
+<div class="product-card" data-static="true"><div class="product-photo"><img src="images/dijkkruid-logo.png" alt="DijkKruid logo"></div><div class="product-copy"><h3>Uit eigen tuin</h3><p>Het assortiment groeit met wat er in de tuin groeit en wat we met aandacht kunnen maken.</p></div></div>
 </div></div></section>
 
 
@@ -147,7 +131,7 @@ footer{padding:56px 0 40px}.footer-grid{display:flex;justify-content:space-betwe
 
 <section class="cta-band" id="bestellen"><div class="wrap"><h2 class="display">Nieuwsgierig naar wat er klaarstaat?</h2><p>Stuur een bericht om te vragen naar de actuele collectie zepen en kruidentincturen.</p><a href="mailto:dijkkruid@gmail.com" class="btn btn-primary">Mail naar dijkkruid@gmail.com</a></div></section>
 
-<footer><div class="wrap"><div class="footer-grid"><a href="#" class="logo"><img src="images/dijkkruid-logo.png" alt="DijkKruid logo">DijkKruid</a><div class="footer-cols"><div class="footer-col"><h4>Contact</h4><a href="mailto:dijkkruid@gmail.com">dijkkruid@gmail.com</a><p>Zuidendijk, Dordrecht</p></div><div class="footer-col"><h4>Vind ons</h4><a href="https://www.facebook.com/DijkKruid/" target="_blank" rel="noopener">Facebook</a></div><div class="footer-col"><h4>Karakter</h4><p>Handgemaakt</p><p>Uit eigen tuin</p><p>Biologisch &amp; natuurlijk</p></div></div></div><div class="footer-bottom"><span>© 2026 DijkKruid — Zuidendijk, Dordrecht.</span><span>Gemaakt met wat de natuur geeft.</span></div></div></footer>
+<footer><div class="wrap"><div class="footer-grid"><a href="#" class="logo"><img src="images/dijkkruid-logo.png" alt="DijkKruid logo">DijkKruid</a><div class="footer-cols"><div class="footer-col"><h4>Contact</h4><a href="mailto:dijkkruid@gmail.com">dijkkruid@gmail.com</a><p>Zuidendijk, Dordrecht</p></div><div class="footer-col"><h4>Vind ons</h4><a href="https://www.facebook.com/DijkKruid/" target="_blank" rel="noopener">Facebook</a></div><div class="footer-col"><h4>Karakter</h4><p>Handgemaakt</p><p>Uit eigen tuin</p><p>Biologisch &amp; natuurlijk</p></div></div></div><div class="footer-bottom"><span>© 2026 DijkKruid — Zuidendijk, Dordrecht. · <a href="privacy.html">Privacyverklaring</a></span><span>Gemaakt met wat de natuur geeft.</span></div></div></footer>
 
 <script>
 const menuBtn=document.getElementById('menuBtn'),mobileMenu=document.getElementById('mobileMenu');
@@ -163,6 +147,7 @@ function setTheme(theme){
 function toggleTheme(){setTheme(currentTheme()==='dark'?'light':'dark');}
 document.getElementById('themeToggle').addEventListener('click',toggleTheme);
 </script>
+<script src="catalog.js" defer></script>
 <script src="shop.js" defer></script>
 </body>
 </html>
